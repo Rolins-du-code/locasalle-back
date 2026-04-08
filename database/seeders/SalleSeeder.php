@@ -18,17 +18,13 @@ class SalleSeeder extends Seeder
             'emplacement' => 'yaoundé, cameroun',
             'capacite' => 1500,
             'prix_par_jour' => 5000000.00,
+            'statut' => 'actif',
+            'user_id' => 1,
+            'ville_id' => 2,
+            'category_id'=> 2,
             'description' => 'Grande salle prestigieuse pour evenements internationaux de grande envergure.',
-            'photos' => json_encode(['https://via.placeholder.com/400x300.png?text=Palais+des+Congrès', 'https://example.com/photos/salleA2.jpg']),
+            'photos' => json_encode(['https://link-to-image1.jpg', 'https://link-to-image2.jpg']),
         ]);
 
-        Salle::create([
-            'nom' => 'Foyer Bandjoun',
-            'emplacement' => 'Bafoussam, cameroun',
-            'capacite' => 500,
-            'prix_par_jour' => 1500000.00,
-            'description' => 'Salle de culture et de loisirs spacieuse.',
-            'photos' => json_encode(['https://via.placeholder.com/400x300.png?text=Foyer+Bandjoun', 'https://example.com/photos/salleB2.jpg']),
-        ]);
     }
 }

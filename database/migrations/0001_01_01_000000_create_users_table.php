@@ -14,7 +14,11 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('telephone')->nullable();// utiliser pour enregistre des contacts
+            $table->string('role')->default('client'); // bon on definir par defaut le client
             $table->string('email')->unique();
+            $table->jsonb('service')->nullable();
+            $table->string('nom_entreprise')->nullable(); // pour les proprietaire de salle qui sont des entreprise
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
